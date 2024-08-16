@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	<property name="connection.url">jdbc:mysql://localhost:3306/hibernate_pro</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">rohit_109</property>
+	
+	 <!-- Specify dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+        
+       
+           <mapping class="com.entities.Note"></mapping>
+                
+        
+	
+	</session-factory>
+
+
+</hibernate-configuration>
